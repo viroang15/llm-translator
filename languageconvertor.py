@@ -19,5 +19,4 @@ def translate(text: str, model = "gpt-4o-mini"):
     if content is None:
         raise RuntimeError("API returned no content—see the raw response above.")
     return content.strip()
-    
 
