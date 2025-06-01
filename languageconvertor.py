@@ -1,9 +1,10 @@
 import os
 from dotenv import load_dotenv
 from openai import OpenAI
+import streamlit as st
 
 load_dotenv()
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 def translate(text: str, model = "gpt-4o-mini"):
     system = "You are a professional translator. Translate any user text from English to German. Answer with German only"
